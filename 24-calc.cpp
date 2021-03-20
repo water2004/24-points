@@ -322,17 +322,20 @@ start:for (int i = 1; i <= 4; i++)
 				s += d1;
 				res = exp(s);
 				if (check(s) && res > 24 - eps && res < 24 + eps) ans.insert(s);
-				// s.clear();
-				// s = a1;
-				// s += cha[i];
-				// s += '(';
-				// s += b1;
-				// s += cha[j];
-				// s += c1;
-				// s += cha[k];
-				// s += d1;
-				// s += ')';
-				// if (check(s)&&exp(s) == 24) ans.insert(s);
+
+				s.clear();
+				s = a1;
+				s += cha[i];
+				s += '(';
+				s += b1;
+				s += cha[j];
+				s += c1;
+				s += cha[k];
+				s += d1;
+				s += ')';
+				res = exp(s);
+				if (check(s) && res > 24 - eps && res < 24 + eps) ans.insert(s);
+
 				s.clear();
 				s = '(';
 				s += a1;
